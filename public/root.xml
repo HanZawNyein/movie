@@ -1,5 +1,36 @@
 <templates>
     <t t-name="Root">
         <Navbar/>
+
+        <div class="container">
+
+            <div class="container">
+                <h1 class="mt-5 mb-5 fw-bold">Movies</h1>
+            </div>
+        <div class="fixed-grid has-5-cols">
+            <div class="grid">
+                <t t-foreach="[1,2,3,4,5,6,7,8,9,10]" t-as="index" t-key="index">
+                    <div class="cell">
+                        <div class="card mb-5">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img
+                                            src="https://bulma.io/assets/images/placeholders/1280x960.png"
+                                            alt="Placeholder image"
+                                    />
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </div>
+        </div>
+
+        </div>
     </t>
 </templates>

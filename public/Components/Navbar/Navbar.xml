@@ -1,6 +1,6 @@
 <templates>
     <t t-name="Navbar">
-        <nav class="navbar" role="navigation" aria-label="main navigation">
+        <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <a class="navbar-item" href="#">
                     <img src="https://www.highcultured.com.mm/web/image/website/4/logo/High%20Cultured%20Myanmar?unique=e4190fe"/>
@@ -30,26 +30,28 @@
                     </a>
                 </div>
 
-                <div class="navbar-end">
-                    <div class="navbar-item  is-hoverable mx-5">
-                        <a class="navbar-link">
-                            <i class="bi bi-person-circle"/>
-                        </a>
-                        <div class="navbar-dropdown">
-                            <a class="navbar-item">
-                                Profile
-                            </a>
-                            <a class="navbar-item">
-                                Settings
-                            </a>
-                            <hr class="navbar-divider"/>
-                            <a class="navbar-item">
-                                Logout
-                            </a>
-                        </div>
+                <div class="navbar-end mx-5">
+                    <div class="navbar-item has-icons-left">
+<!--                        <p class="control has-icons-left">-->
+<!--                            <input class="input" type="text" placeholder="Search" />-->
+<!--                            <span class="icon is-left">-->
+<!--                                <i class="fas fa-search" aria-hidden="true"></i>-->
+<!--                            </span>-->
+<!--                        </p>-->
+                        <i class="fas fa-search"/>
+                    </div>
+                    <div class="navbar-item">
+                        <i class="fas fa-heart"/>
+                    </div>
+                    <div class="navbar-item">
+                        <i class="fas fa-cart-plus"/>
+                    </div>
+                    <div class="navbar-item">
+                        <i class="bi bi-person-circle"/>
                     </div>
                 </div>
             </div>
         </nav>
+
     </t>
 </templates>

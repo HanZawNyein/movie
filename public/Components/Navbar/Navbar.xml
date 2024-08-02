@@ -31,7 +31,7 @@
                 </div>
 
                 <div class="navbar-end">
-                    <div class="navbar-item has-dropdown is-hoverable mx-5">
+                    <div class="navbar-item  is-hoverable mx-5">
                         <a class="navbar-link">
                             <i class="bi bi-person-circle"/>
                         </a>
@@ -39,7 +39,7 @@
                             <a class="navbar-item">
                                 Profile
                             </a>
-                            <a class="navbar-item is-selected">
+                            <a class="navbar-item">
                                 Settings
                             </a>
                             <hr class="navbar-divider"/>

@@ -1,0 +1,30 @@
+{
+  "name": "ecommerence_owl",
+  "version": "0.1.0",
+  "module": "main.js",
+  "type": "module",
+  "app_config": {
+    "port": 3000,
+    "public_path": "public",
+    "build_path": "dist",
+    "inline_css": false,
+    "inline_xml": false,
+    "other_static_files": {}
+  },
+  "scripts": {
+    "prestart": "bun run build",
+    "start": "bun run main.js",
+    "dev": "bun run main.js --dev",
+    "build": "bun run core/cli.js --build"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "chokidar": "^3.5.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@odoo/owl": "^2.2.5"
+  }
+}

@@ -28,16 +28,43 @@
                     <a class="navbar-item">
                         Series
                     </a>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            Categories
+                        </a>
+
+                        <div class="navbar-dropdown">
+                            <t t-foreach="['Action','Comedy','Dram']" t-as="category" t-key="category">
+                                <a class="navbar-item">
+                                    <t t-esc="category"/>
+                                </a>
+                            </t>
+                        </div>
+                    </div>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            Years
+                        </a>
+
+                        <div class="navbar-dropdown">
+                            <t t-foreach="[2022,2023,2024]" t-as="year" t-key="year">
+                                <a class="navbar-item">
+                                    <t t-esc="year"/>
+                                </a>
+                            </t>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="navbar-end mx-5">
                     <div class="navbar-item has-icons-left">
-<!--                        <p class="control has-icons-left">-->
-<!--                            <input class="input" type="text" placeholder="Search" />-->
-<!--                            <span class="icon is-left">-->
-<!--                                <i class="fas fa-search" aria-hidden="true"></i>-->
-<!--                            </span>-->
-<!--                        </p>-->
+                        <!--                        <p class="control has-icons-left">-->
+                        <!--                            <input class="input" type="text" placeholder="Search" />-->
+                        <!--                            <span class="icon is-left">-->
+                        <!--                                <i class="fas fa-search" aria-hidden="true"></i>-->
+                        <!--                            </span>-->
+                        <!--                        </p>-->
                         <i class="fas fa-search"/>
                     </div>
                     <div class="navbar-item">

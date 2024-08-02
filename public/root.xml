@@ -9,7 +9,7 @@
             </div>
         <div class="fixed-grid has-5-cols">
             <div class="grid">
-                <t t-foreach="[1,2,3,4,5,6,7,8,9,10]" t-as="index" t-key="index">
+                <t t-foreach="[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]" t-as="index" t-key="index">
                     <div class="cell">
                         <div class="card mb-5">
                             <div class="card-image">

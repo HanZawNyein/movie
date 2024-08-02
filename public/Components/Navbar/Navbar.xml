@@ -1,0 +1,55 @@
+<templates>
+    <t t-name="Navbar">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#">
+                    <img src="https://www.highcultured.com.mm/web/image/website/4/logo/High%20Cultured%20Myanmar?unique=e4190fe"/>
+                </a>
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                   data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item">
+                        Home
+                    </a>
+
+                    <a class="navbar-item">
+                        Movies
+                    </a>
+
+                    <a class="navbar-item">
+                        Series
+                    </a>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item has-dropdown is-hoverable mx-5">
+                        <a class="navbar-link">
+                            <i class="bi bi-person-circle"/>
+                        </a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item">
+                                Profile
+                            </a>
+                            <a class="navbar-item is-selected">
+                                Settings
+                            </a>
+                            <hr class="navbar-divider"/>
+                            <a class="navbar-item">
+                                Logout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </t>
+</templates>

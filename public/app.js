@@ -1,4 +1,4 @@
-// In this example, we show how components can be defined and created.
+// In this example, we show how Components can be defined and created.
 import { mount } from "@odoo/owl";
 import { Root } from "./root";
 

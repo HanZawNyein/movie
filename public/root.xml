@@ -1,7 +1,5 @@
 <templates>
     <t t-name="Root">
-<!--        <link rel="stylesheet" href="style.css"/>-->
-        <div>hello owl</div>
-      <button class="btn btn-primary">Hello</button>
+        <Navbar/>
     </t>
 </templates>

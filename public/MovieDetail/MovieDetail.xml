@@ -39,7 +39,7 @@
                 <div class="fixed-grid">
                     <div class="grid">
                         <h1 class="cell mt-5 mb-5">Related Movies</h1>
-                        <h1 class="cell is-col-from-end-1 mt-5 mb-5">See All</h1>
+                        <h1 class="cell is-col-from-end-1 mt-5 mb-5" t-on-click="()=>this.env.switchScreen('home')">See All</h1>
                     </div>
                 </div>
                 <div class="grid">

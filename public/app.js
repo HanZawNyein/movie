@@ -6,6 +6,6 @@ import {ENV} from "./env.js";
 const templates = await FETCH_TEMPLATES();
 mount(Root, document.body, {
     templates,
-    ENV,
+    env:ENV,
     dev: DEV, // injected by server
 });

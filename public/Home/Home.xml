@@ -4,11 +4,11 @@
 <!--            <t t-set-slot="control-panel">-->
 <!--                Home-->
 <!--            </t>-->
-            <MovieList>
-                <t t-foreach="store.movies" t-as="movie" t-key="movie.id">
-                    <MovieCard movie="movie"/>
-                </t>
-            </MovieList>
+            <MovieList movies="getMovies()"/>
+<!--                <t t-foreach="store.movies" t-as="movie" t-key="movie.id">-->
+<!--                    <MovieCard movie="movie"/>-->
+<!--                </t>-->
+<!--            </MovieList>-->
         </Layout>
     </t>
 </templates>

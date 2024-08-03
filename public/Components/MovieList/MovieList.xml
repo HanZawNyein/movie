@@ -2,7 +2,9 @@
     <t t-name="MovieList">
         <div class="fixed-grid has-7-cols">
             <div class="grid">
-                <t t-slot="default"/>
+                <t t-foreach="props.movies" t-as="movie" t-key="movie.id">
+                    <MovieCard movie="movie"/>
+                </t>
             </div>
         </div>
     </t>

@@ -19,15 +19,17 @@
             <div id="navbarBasicExample" class="navbar-menu">
                 <div class="navbar-start">
                     <a class="navbar-item" t-att-class="currentScreenName == 'home'?'is-selected':''"
-                       t-on-click="()=>this.env.switchScreen('home')">
+                       t-on-click="()=>this.env.switchScreen('home',{'movie_type':'all'})">
                         Home
                     </a>
 
-                    <a class="navbar-item" t-on-click="()=>this.env.switchScreen('home')">
+                    <a class="navbar-item" t-att-class="currentScreenName == 'movie'?'is-selected':''"
+                       t-on-click="()=>this.env.switchScreen('movie',{'movie_type':'movie'})">
                         Movies
                     </a>
 
-                    <a class="navbar-item" t-on-click="()=>this.env.switchScreen('home')">
+                    <a class="navbar-item" t-att-class="currentScreenName == 'series'?'is-selected':''"
+                       t-on-click="()=>this.env.switchScreen('series',{'movie_type':'series'})">
                         Series
                     </a>
 

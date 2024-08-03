@@ -7,16 +7,16 @@ export class Root extends Component {
 
     setup() {
         this.state = useState({
-            currentScreen: this.env.routes[0],
+            currentScreen: {...this.env.routes[0], props: {}},
         });
-
+        console.log(this.state.currentScreen)
         useSubEnv({"switchScreen": this.switchScreen.bind(this)});
     }
 
-    switchScreen(screenName) {
+    switchScreen(screenName, props) {
         var newScreen = this.env.routes.find((route) => route.name === screenName);
         if (newScreen) {
-            this.state.currentScreen = newScreen;
+            this.state.currentScreen = {...newScreen, props: {...props}};
         }
     }
 }

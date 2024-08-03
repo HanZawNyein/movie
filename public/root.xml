@@ -3,7 +3,8 @@
         <Navbar/>
 
         <div class="mt-5 container">
-            <t t-component="state.currentScreen.component" switchScreen.bind="switchScreen"/>
+            <t t-component="state.currentScreen.component"
+               t-props="state.currentScreen.props"/>
         </div>
     </t>
 </templates>

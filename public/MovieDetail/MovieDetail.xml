@@ -4,7 +4,7 @@
             <t t-set-slot="control-panel">
                 A
             </t>
-            <h1>H</h1>
+            <h1>Movie Details</h1>
         </Layout>
     </t>
 </templates>

@@ -7,6 +7,7 @@ export default class MovieDetail extends Component {
     static components = {Layout, MovieCard};
 
     setup(){
-        console.log(this.props)
+        console.log("Details")
+        console.log(this.props);
     }
 }

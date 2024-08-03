@@ -1,0 +1,12 @@
+<templates>
+    <t t-name="Layout">
+        <div class="container" style="margin-top:5%;">
+            <div class="container mt-5 mb-5">
+                <t t-slot="control-panel"/>
+            </div>
+            <div class="o-content" t-att-class="props.contentClass">
+                <t t-slot="default"/>
+            </div>
+        </div>
+    </t>
+</templates>

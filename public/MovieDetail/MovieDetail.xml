@@ -2,11 +2,46 @@
     <t t-name="MovieDetail">
         <Layout>
             <t t-set="movie" t-value="props.movie"/>
-            <img class="image" t-att-src="movie.cover"/>
-            <h1><t t-esc="movie.title"/></h1>
-            <p><t t-esc="movie.release"/></p>
+
+            <div class="fixed-grid">
+                <div class="grid">
+                    <div class="cell">
+                        <img class="image" t-att-src="movie.cover"/>
+
+                    </div>
+                    <div class="cell">
+                        <div>
+                            <h1 class="fw-bold">
+                                <t t-esc="movie.title"/>
+                            </h1>
+                            <p>
+                                <t t-esc="movie.release"/>
+                            </p>
+                        </div>
+                        <p>
+                            Creating the routes and adding the router to the env
+                            The router in OWL is an object that has to be instantiated
+                            and "attached" to the env of our main App.
+                            Env is an environment is an object which contains
+                            a QWeb instance. Whenever a root component is created,
+                            it is assigned an environment. This environment is then
+                            automatically given to all child components (and accessible in the this.env property).
+                            A router can run in hash or history_mode. Here we will use the hash mode because the
+                            expected result for RealWorld App is URLs
+                            like /#/profile /#/settings, etc. The router will also handle direct,
+                            programmatically navigation/redirection, navigation guards, to protect some
+                            routes behind conditions, and routes also accept parameters. Official documentation of OWL router.
+                        </p>
+                    </div>
+                </div>
+            </div>
             <div>
-                <h1 class="mt-5 mb-5">Related Movies</h1>
+                <div class="fixed-grid">
+                    <div class="grid">
+                        <h1 class="cell mt-5 mb-5">Related Movies</h1>
+                        <h1 class="cell is-col-from-end-1 mt-5 mb-5">See All</h1>
+                    </div>
+                </div>
                 <div class="grid">
                     <t t-foreach="getRelatedMovies()" t-as="relatedMovie" t-key="relatedMovie.id">
                         <div class="cell">

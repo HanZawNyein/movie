@@ -1,25 +1,31 @@
 <templates>
     <t t-name="Home">
         <Layout>
-            <t t-set-slot="control-panel">
-                Home
-            </t>
+<!--            <t t-set-slot="control-panel">-->
+<!--                Home-->
+<!--            </t>-->
             <div class="fixed-grid has-5-cols">
                 <div class="grid">
-                    <t t-foreach="[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]" t-as="index" t-key="index">
+                    <t t-foreach="store.movies" t-as="movie" t-key="movie.id">
                         <div class="cell">
                             <div class="card mb-5">
                                 <div class="card-image">
                                     <figure class="image is-4by3">
                                         <img
-                                                src="https://bulma.io/assets/images/placeholders/1280x960.png"
+                                                t-att-src="movie.cover"
                                                 alt="Placeholder image"
                                         />
                                     </figure>
                                 </div>
                                 <div class="card-content">
                                     <div class="content">
-                                        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                                        <p>
+                                            <time datetime="2016-1-1">
+                                                <t t-esc="movie.release"/>
+                                            </time>
+                                        </p>
+                                        <t t-esc="movie.title"/>
+
                                     </div>
                                 </div>
                             </div>

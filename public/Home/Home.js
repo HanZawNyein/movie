@@ -18,7 +18,6 @@ export default class Home extends Component {
     }
 
     getMovies(){
-        console.log(this.props)
         if(!this.props.movie_type || this.props.movie_type === "all"){
             return this.store.movies;
         }else{

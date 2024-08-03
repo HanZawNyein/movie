@@ -8,10 +8,6 @@ export default class MovieCard extends Component{
     // }
 
     switchScreen(){
-        console.log("MOvie Card")
-        console.log(this.env);
         this.env.switchScreen('detail');
-        console.log(this.props)
-
     }
 }

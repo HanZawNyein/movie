@@ -5,4 +5,8 @@ import MovieCard from "../Components/MovieCard/MovieCard.js";
 export default class MovieDetail extends Component {
     static template = "MovieDetail";
     static components = {Layout, MovieCard};
+
+    setup(){
+        console.log(this.props)
+    }
 }

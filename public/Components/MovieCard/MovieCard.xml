@@ -2,7 +2,7 @@
     <t t-name="MovieCard">
         <t t-set="movie" t-value="props.movie"/>
         <div class="cell">
-            <div class="card mb-5" t-on-click="switchScreen">
+            <div class="card mb-5" t-on-click="(movie)=>env.switchScreen('detail')">
                 <div class="card-image">
                     <figure class="image is-4by3">
                         <img

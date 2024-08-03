@@ -1,6 +1,7 @@
 <templates>
     <t t-name="Navbar">
         <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+            <t t-set="currentScreenName" t-value="props.currentScreen.name"/>
             <div class="navbar-brand">
                 <a class="navbar-item" href="#">
                     <img src="https://www.highcultured.com.mm/web/image/website/4/logo/High%20Cultured%20Myanmar?unique=e4190fe"/>
@@ -17,7 +18,8 @@
 
             <div id="navbarBasicExample" class="navbar-menu">
                 <div class="navbar-start">
-                    <a class="navbar-item" t-on-click="()=>this.env.switchScreen('home')">
+                    <a class="navbar-item" t-att-class="currentScreenName == 'home'?'is-selected':''"
+                       t-on-click="()=>this.env.switchScreen('home')">
                         Home
                     </a>
 
@@ -43,7 +45,7 @@
                         </div>
                     </div>
                     <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link" >
+                        <a class="navbar-link">
                             Years
                         </a>
 

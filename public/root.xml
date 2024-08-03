@@ -1,6 +1,6 @@
 <templates>
     <t t-name="Root">
-        <Navbar/>
+        <Navbar currentScreen="state.currentScreen"/>
 
         <div class="mt-5 container">
             <t t-component="state.currentScreen.component"

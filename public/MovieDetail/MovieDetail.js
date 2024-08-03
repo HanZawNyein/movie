@@ -11,4 +11,8 @@ export default class MovieDetail extends Component {
         // console.log(this.props);
         this.store = this.env.store;
     }
+
+    getRelatedMovies(){
+        return this.store.movies.slice(0,6);
+    }
 }

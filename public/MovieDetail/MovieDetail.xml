@@ -5,15 +5,17 @@
             <img class="image" t-att-src="movie.cover"/>
             <h1><t t-esc="movie.title"/></h1>
             <p><t t-esc="movie.release"/></p>
-            <div class="grid">
-                <t t-foreach="store.movies" t-as="movie" t-key="movie.id">
-                    <div class="cell">
-                        <div class="card">
-                            <MovieCard movie="movie"/>
+            <div>
+                <h1 class="mt-5 mb-5">Related Movies</h1>
+                <div class="grid">
+                    <t t-foreach="getRelatedMovies()" t-as="relatedMovie" t-key="relatedMovie.id">
+                        <div class="cell">
+                            <div class="card">
+                                <MovieCard movie="relatedMovie"/>
+                            </div>
                         </div>
-                    </div>
-                </t>
-
+                    </t>
+                </div>
             </div>
         </Layout>
     </t>

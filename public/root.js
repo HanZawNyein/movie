@@ -1,4 +1,4 @@
-import {Component, useState} from "@odoo/owl";
+import {Component, useState, useSubEnv} from "@odoo/owl";
 import Navbar from "./Components/Navbar/Navbar.js";
 
 export class Root extends Component {
@@ -6,9 +6,16 @@ export class Root extends Component {
     static components = {Navbar};
 
     setup() {
-
         this.state = useState({
             currentScreen: this.env.routes[0],
         });
+        useSubEnv({"switchScreen": this.switchScreen});
+    }
+
+    switchScreen(screenName) {
+        var newScreen = this.env.routes.find((route) => route.name === screenName);
+        if (newScreen) {
+            this.state.currentScreen = newScreen;
+        }
     }
 }

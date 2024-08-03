@@ -1,9 +1,9 @@
 <templates>
     <t t-name="Home">
         <Layout>
-<!--            <t t-set-slot="control-panel">-->
-<!--                Home-->
-<!--            </t>-->
+            <t t-set-slot="control-panel">
+                Home
+            </t>
             <MovieList>
                 <t t-foreach="store.movies" t-as="movie" t-key="movie.id">
                     <MovieCard movie="movie"/>

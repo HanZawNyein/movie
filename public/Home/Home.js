@@ -9,5 +9,6 @@ export default class Home extends Component {
 
     setup() {
         this.store = this.env.store;
+        console.log(this.env)
     }
 }

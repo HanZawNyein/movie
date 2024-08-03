@@ -1,0 +1,36 @@
+<templates>
+    <t t-name="MovieList">
+        <div class="fixed-grid has-5-cols">
+            <div class="grid">
+                <t t-slot="default">
+
+                </t>
+<!--                <t t-foreach="store.movies" t-as="movie" t-key="movie.id">-->
+<!--                    <div class="cell">-->
+<!--                        <div class="card mb-5">-->
+<!--                            <div class="card-image">-->
+<!--                                <figure class="image is-4by3">-->
+<!--                                    <img-->
+<!--                                            t-att-src="movie.cover"-->
+<!--                                            alt="Placeholder image"-->
+<!--                                    />-->
+<!--                                </figure>-->
+<!--                            </div>-->
+<!--                            <div class="card-content">-->
+<!--                                <div class="content">-->
+<!--                                    <p>-->
+<!--                                        <time datetime="2016-1-1">-->
+<!--                                            <t t-esc="movie.release"/>-->
+<!--                                        </time>-->
+<!--                                    </p>-->
+<!--                                    <t t-esc="movie.title"/>-->
+
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </t>-->
+            </div>
+        </div>
+    </t>
+</templates>

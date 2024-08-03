@@ -1,10 +1,20 @@
 <templates>
     <t t-name="MovieDetail">
         <Layout>
-            <t t-set-slot="control-panel">
-                A
-            </t>
-            <h1>Movie Details</h1>
+            <t t-set="movie" t-value="props.movie"/>
+            <img class="image" t-att-src="movie.cover"/>
+            <h1><t t-esc="movie.title"/></h1>
+            <p><t t-esc="movie.release"/></p>
+            <div class="grid">
+                <t t-foreach="store.movies" t-as="movie" t-key="movie.id">
+                    <div class="cell">
+                        <div class="card">
+                            <MovieCard movie="movie"/>
+                        </div>
+                    </div>
+                </t>
+
+            </div>
         </Layout>
     </t>
 </templates>
